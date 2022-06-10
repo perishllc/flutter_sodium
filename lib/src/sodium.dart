@@ -1804,12 +1804,12 @@ class Sodium {
   }
 
   static Uint8List cryptoSignEd25519SkToCurve25519(Uint8List ed25519Sk) {
-    RangeError.checkValueInInterval(
-        ed25519Sk.length,
-        cryptoSignEd25519Secretkeybytes,
-        cryptoSignEd25519Secretkeybytes,
-        'ed25519Sk',
-        'Invalid length');
+    // RangeError.checkValueInInterval(
+    //     ed25519Sk.length,
+    //     cryptoSignEd25519Secretkeybytes,
+    //     cryptoSignEd25519Secretkeybytes,
+    //     'ed25519Sk',
+    //     'Invalid length');
 
     final _curve25519Pk = calloc<Uint8>(cryptoScalarmultCurve25519Bytes);
     final _ed25519Sk = ed25519Sk.toPointer();
